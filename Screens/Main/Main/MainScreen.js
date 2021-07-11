@@ -258,15 +258,21 @@ const App = props => {
                 alignItems: 'center',
                 flexDirection: 'row',
               }}>
-              <Avatar source={require('../../../src/img/sprites/1.png')} />
-              <Avatar source={require('../../../src/img/sprites/2.png')} />
-              <Avatar source={require('../../../src/img/sprites/3.png')} />
-              <Avatar source={require('../../../src/img/sprites/4.png')} />
-              <Avatar source={require('../../../src/img/sprites/5.png')} />
-              <Avatar source={require('../../../src/img/sprites/6.png')} />
-              <Avatar source={require('../../../src/img/sprites/7.png')} />
-              <Avatar source={require('../../../src/img/sprites/8.png')} />
-              <Avatar source={require('../../../src/img/sprites/9.png')} />
+              <View style={StepStyles.badgeContainer}>
+                <Avatar source={require('../../../src/img/sprites/1.png')} />
+                <Text style={StepStyles.badgeText}>Genesis</Text>
+                <Text style={StepStyles.badgeSubText}>#1</Text>
+              </View>
+              <View style={StepStyles.badgeContainer}>
+                <Avatar source={require('../../../src/img/sprites/2.png')} />
+                <Text style={StepStyles.badgeText}>Atlas</Text>
+                <Text style={StepStyles.badgeSubText}>#3</Text>
+              </View>
+              <View style={StepStyles.badgeContainer}>
+                <Avatar source={require('../../../src/img/sprites/3.png')} />
+                <Text style={StepStyles.badgeText}>Icarus</Text>
+                <Text style={StepStyles.badgeSubText}>#5</Text>
+              </View>
             </View>
 
             {/*
@@ -302,6 +308,12 @@ const App = props => {
 };
 
 const StepStyles = StyleSheet.create({
+  badgeText: {
+    fontWeight: 'bold',
+  },
+  badgeSubText: {
+    color: '#7f7f7f',
+  },
   screen: {
     width: '100%',
     height: '100%',
@@ -321,10 +333,20 @@ const StepStyles = StyleSheet.create({
     alignItems: 'center',
   },
   badgeContainer: {
-    aspectRatio: 1,
-    width: 60,
-    margin: 10,
-    justifyContent: 'center',
+    width: 80,
+    margin: 16,
+    padding: 8,
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 5,
+      height: 5,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 10,
   },
   backdrop: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
