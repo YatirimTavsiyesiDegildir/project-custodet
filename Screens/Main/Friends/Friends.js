@@ -32,10 +32,25 @@ export default class FriendsScreen extends Component {
     this.state = {
       friends: [
         {
-          name: 'Cinar Kiziltepe',
+          name: 'Çınar Kızıltepe',
           img: require('../../../src/img/cinar.jpg'),
         },
-        {name: 'Ada Topcu', img: require('../../../src/img/ada.jpeg')},
+        {
+          name: 'Hain Kostok',
+          img: require('../../../src/img/kostok.jpg'),
+        },
+        {
+          name: 'Ali Rıza Bey',
+          img: require('../../../src/img/ali.jpg'),
+        },
+        {
+          name: 'Kral Şakir',
+          img: require('../../../src/img/sakir.webp'),
+        },
+        {
+          name: 'Doğu Deniz Uğur',
+          img: require('../../../src/img/dogu.jpeg'),
+        },
         // {name: 'Ege Kaan Gurkan'},
         // {name: 'Yashar Kardar'},
         // {name: 'Beril Karabulut'},

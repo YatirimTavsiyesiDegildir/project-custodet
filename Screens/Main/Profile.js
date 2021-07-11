@@ -152,7 +152,8 @@ export default class ProfileScreen extends Component {
                     </Text>
                   </View>
                 </View>
-                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>7600/10000</Text>
+                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>Günlük adımlarım: 7602/10,000</Text>
+                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>Toplam adımlarım: 289,312</Text>
               </View>
             </Card>
             <View style={styles.divider} />
