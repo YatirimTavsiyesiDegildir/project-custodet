@@ -77,7 +77,7 @@ const ModalWithBackdropShowcase = (
  */
 
 const App = props => {
-  const [steps, setSteps] = useState(5000);
+  const [steps, setSteps] = useState(3248);
 
   useEffect(() => {
     const config = {
@@ -207,10 +207,15 @@ const App = props => {
             style={[styles.card, {backgroundColor: '#ad7070'}]}
             status="basic">
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
-              <Text style={{justifyContent: 'center', alignSelf: 'center', fontWeight:'bold'}}>
+              <Text
+                style={{
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                  fontWeight: 'bold',
+                }}>
                 {' '}
-                Tebrikler, Anadolu hayat emeklilik kampanyalarından
-                yararlanabilirsiniz.{' '}
+                Tebrikler! Sana özel bir Anadolu hayat emeklilik kampanyasından
+                yararlanmaya hak kazandın. Keşfetmek için hemen tıkla!{' '}
               </Text>
             </View>
           </Card>
@@ -219,7 +224,12 @@ const App = props => {
             <Text category={'h3'} style={styles.titleTextMedium}>
               NFT'lerim
             </Text>
-            <View style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row',}} >
+            <View
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}>
               <Avatar source={require('../../../src/img/sprites/1.png')} />
               <Avatar source={require('../../../src/img/sprites/2.png')} />
               <Avatar source={require('../../../src/img/sprites/3.png')} />
@@ -230,8 +240,6 @@ const App = props => {
               <Avatar source={require('../../../src/img/sprites/8.png')} />
               <Avatar source={require('../../../src/img/sprites/9.png')} />
             </View>
-
-
 
             {/*
             <View style={StepStyles.badgeRow}>
