@@ -147,16 +147,18 @@ export default class ProfileScreen extends Component {
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}>
-                    <Text style={{color: '#EFEFEF'}}>9</Text>
+                    <Text style={{color: '#efefef', fontWeight: 'bold'}}>
+                      9
+                    </Text>
                   </View>
                 </View>
-                <Text style={{color: '#ACACAC'}}>Çırak -> Amatör</Text>
+                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>7600/10000</Text>
               </View>
             </Card>
             <View style={styles.divider} />
             <Card style={[styles.card]}>
               <Text category={'h3'} style={styles.titleTextMedium}>
-                Rozetlerim
+                NFT'lerim
               </Text>
               <View style={ProfileStyles.badgeRow}>
                 {this.ModalWithBackdropShowcase(
