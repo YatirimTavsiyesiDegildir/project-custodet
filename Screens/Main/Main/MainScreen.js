@@ -84,7 +84,7 @@ const App = props => {
       default_delay: 150000000,
       cheatInterval: 3000,
       onStepCountChange: stepCount => {
-        setSteps(stepCount);
+        setSteps(steps + stepCount);
       },
       onCheat: () => {
         Alert.alert("Please don't cheat!");
@@ -185,10 +185,10 @@ const App = props => {
           </Card>
           <View style={styles.divider} />
 
-          <Card style={[styles.Card]}>
-            <View style={{flex: 1, alignItems: 'center', marginTop: 20}}>
-              <Text style={styles.miniTitle}> Bugünkü adımlarım </Text>
-            </View>
+          <Card style={[styles.card]}>
+            <Text category="h4" style={styles.titleTextMedium}>
+              Bugunku Adimlarim
+            </Text>
             <AnimatedCircularProgress
               size={200}
               width={20}
@@ -196,7 +196,7 @@ const App = props => {
               fill={steps / 100}
               tintColor="#00e0ff"
               backgroundColor="#3d5875">
-              {steps => <Text>{steps * 100} / 10,000</Text>}
+              {steps => <Text>{Math.floor(steps * 100)} / 10,000</Text>}
             </AnimatedCircularProgress>
           </Card>
 
@@ -229,6 +229,8 @@ const App = props => {
             </View>
             */}
           </Card>
+
+          <View style={{height: 75}} />
         </ScrollView>
       </Layout>
     </SafeAreaView>
