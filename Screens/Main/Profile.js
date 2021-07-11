@@ -20,7 +20,6 @@ import {
 } from '@ui-kitten/components';
 
 const LogoutIcon = props => <Icon {...props} name="log-out" />;
-const LockIcon = props => <Icon {...props} name="lock" />;
 import styles from '../../src/styles';
 
 import * as Progress from 'react-native-progress';
@@ -39,52 +38,6 @@ export default class ProfileScreen extends Component {
       onPress={() => this.props.route.params.mainFunctions.logout()}
     />
   );
-
-  ModalWithBackdropShowcase = (
-    badgeString = '',
-    imgUri = '',
-    locked = false,
-  ) => {
-    return (
-      <View
-        style={[
-          ProfileStyles.badgeContainer,
-          locked
-            ? {
-                backgroundColor: '#7F7F7F77',
-                borderRadius: 10,
-              }
-            : null,
-        ]}>
-        {!locked ? (
-          <>
-            <TouchableOpacity
-              onPress={() =>
-                this.setState({visible: true, badgeText: badgeString})
-              }>
-              <Image
-                style={{height: 60, width: 60}}
-                source={{
-                  uri: imgUri,
-                }}
-              />
-            </TouchableOpacity>
-
-            <Modal
-              visible={this.state.visible}
-              backdropStyle={ProfileStyles.backdrop}
-              onBackdropPress={() => this.setState({visible: false})}>
-              <Card disabled={true} style={{margin: 10}}>
-                <Text>{this.state.badgeText}</Text>
-              </Card>
-            </Modal>
-          </>
-        ) : (
-          <LockIcon fill={'#575757'} style={{height: '100%', width: '100%'}} />
-        )}
-      </View>
-    );
-  };
 
   render() {
     return (
@@ -152,35 +105,12 @@ export default class ProfileScreen extends Component {
                     </Text>
                   </View>
                 </View>
-                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>Günlük adımlarım: 7602/10,000</Text>
-                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>Toplam adımlarım: 289,312</Text>
-              </View>
-            </Card>
-            <View style={styles.divider} />
-            <Card style={[styles.card]}>
-              <Text category={'h3'} style={styles.titleTextMedium}>
-                NFT'lerim
-              </Text>
-              <View style={ProfileStyles.badgeRow}>
-                {this.ModalWithBackdropShowcase(
-                  'Tebrikler! İlk arkadaşlı koşunu gerçeklerştirdin.',
-                  'https://project-lyda.s3.eu-central-1.amazonaws.com/badges/clap.jpeg',
-                )}
-                {this.ModalWithBackdropShowcase(
-                  'Tebrikler! Bir hafta boyunca eksiksiz hazırlandın.',
-                  'https://project-lyda.s3.eu-central-1.amazonaws.com/badges/flag.jpg',
-                )}
-                {this.ModalWithBackdropShowcase(
-                  'Tebrikler! Haftanın birincisi oldun.',
-                  'https://project-lyda.s3.eu-central-1.amazonaws.com/badges/natural.jpeg',
-                )}
-                {this.ModalWithBackdropShowcase('', '', true)}
-              </View>
-              <View style={ProfileStyles.badgeRow}>
-                {this.ModalWithBackdropShowcase('', '', true)}
-                {this.ModalWithBackdropShowcase('', '', true)}
-                {this.ModalWithBackdropShowcase('', '', true)}
-                {this.ModalWithBackdropShowcase('', '', true)}
+                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>
+                  Günlük adımlarım: 7602/10,000
+                </Text>
+                <Text style={{color: '#7d7878', fontWeight: 'bold'}}>
+                  Toplam adımlarım: 289,312
+                </Text>
               </View>
             </Card>
             <View style={{height: 75}} />
@@ -192,13 +122,6 @@ export default class ProfileScreen extends Component {
 }
 
 const ProfileStyles = StyleSheet.create({
-  badgeRow: {
-    height: 80,
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   badgeContainer: {
     aspectRatio: 1,
     width: 60,

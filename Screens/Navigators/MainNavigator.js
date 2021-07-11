@@ -13,7 +13,7 @@ import AddFriendsScreen from '../Main/Friends/AddFriends';
 import TargetScreen from '../Main/Targets/Targets';
 import AddTarget from '../Main/Targets/AddTarget';
 import Notifications from '../Main/Notifications';
-import Leaderboard from '../Main/Friends/Advice';
+import LeaderboardScreen from '../Main/Friends/Leaderboard';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -43,7 +43,7 @@ const FriendsStack = props => (
   <Stack.Navigator headerMode="none">
     <Stack.Screen name="FriendsScreen" component={FriendsScreen} />
     <Stack.Screen name="AddFriendsScreen" component={AddFriendsScreen} />
-    <Stack.Screen name="AdvicesScreen" component={Leaderboard} />
+    <Stack.Screen name="LeaderboardScreen" component={LeaderboardScreen} />
   </Stack.Navigator>
 );
 

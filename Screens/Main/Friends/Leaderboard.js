@@ -12,7 +12,7 @@ import styles from '../../../src/styles';
 
 import Leaderboard from 'react-native-leaderboard';
 
-export default class Leaderboard extends Component {
+export default class LeaderboardScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {

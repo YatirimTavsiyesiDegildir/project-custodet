@@ -128,7 +128,7 @@ export default class FriendsScreen extends Component {
   navigateAdvices = () => (
     <TopNavigationAction
       icon={FlashIcon}
-      onPress={() => this.props.navigation.navigate('AdvicesScreen')}
+      onPress={() => this.props.navigation.navigate('LeaderboardScreen')}
     />
   );
 
