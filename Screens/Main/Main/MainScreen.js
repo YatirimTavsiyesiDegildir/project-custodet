@@ -87,102 +87,9 @@ export default class GraphsScreen extends Component {
                 onRefresh={() => this.setState({refreshing: false})}
               />
             }>
-            <Card
-              style={[
-                styles.card,
-                {alignItems: 'flex-start', justifyContent: 'flex-start'},
-              ]}>
-              <Image
-                source={require('../../../src/img/marathon_logo.png')}
-                style={{width: 100, height: 100}}
-                resizeMode={'contain'}
-              />
-              <View
-                style={{
-                  backgroundColor: '#eb008d',
-                  width: 310,
-                  height: 100,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 16,
-
-                  shadowColor: '#000',
-                  shadowOffset: {
-                    width: 0,
-                    height: 2,
-                  },
-                  shadowOpacity: 0.25,
-                  shadowRadius: 3.84,
-
-                  elevation: 5,
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'center',
-                    width: '100%',
-                    textAlign: 'center',
-                    fontWeight: 'bold',
-                    color: '#FFF',
-                    fontSize: 24,
-                  }}>
-                  3 Ay, 27 Gun, 6 Saat
-                </Text>
-              </View>
-            </Card>
 
             <View style={styles.divider} />
 
-            <Card
-              style={[
-                styles.card,
-                {
-                  alignItems: 'flex-start',
-                  justifyContent: 'flex-start',
-                  backgroundColor: '#0175ec',
-                },
-              ]}>
-              <Text
-                style={{
-                  alignSelf: 'center',
-                  width: '100%',
-                  color: '#FFF',
-                  fontSize: 18,
-                  marginBottom: 8,
-                }}>
-                Artik Marathona Hazirsin!
-              </Text>
-              <View
-                style={{
-                  width: 320,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <View
-                  style={{
-                    backgroundColor: '#00000000',
-                    padding: 8,
-                    paddingHorizontal: 32,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: 16,
-                    borderColor: '#ffffff',
-                    borderWidth: 2,
-                    width: 250,
-                  }}>
-                  <Text
-                    style={{
-                      alignSelf: 'center',
-                      width: '100%',
-                      textAlign: 'center',
-                      fontWeight: 'bold',
-                      color: '#FFF',
-                      fontSize: 24,
-                    }}>
-                    Hemen Kaydol
-                  </Text>
-                </View>
-              </View>
-            </Card>
 
             <View style={styles.divider} />
 
@@ -195,7 +102,7 @@ export default class GraphsScreen extends Component {
                 <View style={GraphsStyles.successCircle} />
                 <Text style={{color: '#0B0B0B', fontWeight: 'bold'}}>
                   {' '}
-                  Bir arkadasinla kos
+                  Bir arkadaşınla kos
                 </Text>
               </View>
               <View style={GraphsStyles.taskRow}>
@@ -244,7 +151,7 @@ export default class GraphsScreen extends Component {
 
             <Card style={styles.card}>
               <Text category="h4" style={styles.titleTextMedium}>
-                Bu Ay Tamamladigin Kosular
+                Bu Ay Tamamladığın Koşular
               </Text>
               <LineChart
                 data={{
