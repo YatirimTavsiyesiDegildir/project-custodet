@@ -40,7 +40,7 @@ export default class LeaderboardScreen extends Component {
     return (
       <SafeAreaView style={{flex: 1}}>
         <TopNavigation
-          title={<Text style={styles.miniTitle}>Haftanin Liderleri</Text>}
+          title={<Text style={styles.miniTitle}>Haftanın Liderleri</Text>}
           alignment="center"
           accessoryLeft={this.renderLeftActions}
         />

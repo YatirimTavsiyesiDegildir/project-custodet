@@ -152,11 +152,11 @@ const App = props => {
                   color: '#ffffff',
                   textAlign: 'center',
                 }}>
-                Yurumeye onem verip saglikli yasadigin icin sana ozel bir
+                Yürümeye önem verip sağlıklı yaşadığın için sana özel bir
                 hediyemiz var! {'\n'}
                 {'\n'}
-                Hemen tikla ve Anadolu Hayat Emekliligin indirimli saglik
-                sigortasindan yararlan.
+                Hemen tıkla ve Anadolu Hayat Emekliliğin indirimli sağlık
+                sigortasından yararlan.
               </Text>
             </View>
           </Card>
@@ -250,7 +250,7 @@ const App = props => {
 
           <Card style={[styles.card]}>
             <Text category={'h3'} style={styles.titleTextMedium}>
-              Koleksiyon
+              Koleksiyonum
             </Text>
             <View
               style={{
