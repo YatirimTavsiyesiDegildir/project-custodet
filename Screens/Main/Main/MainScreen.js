@@ -22,8 +22,10 @@ import {
 } from '@ui-kitten/components';
 import styles from '../../../src/styles';
 import {AnimatedCircularProgress} from 'react-native-circular-progress';
+import * as Progress from 'react-native-progress';
 
 const LockIcon = props => <Icon {...props} name="lock" />;
+const LogoutIcon = props => <Icon {...props} name="log-out" />;
 
 /*
 const ModalWithBackdropShowcase = (
@@ -73,7 +75,14 @@ const ModalWithBackdropShowcase = (
 };
  */
 
-const App = () => {
+const BackAction = () => (
+  <TopNavigationAction
+    icon={LogoutIcon}
+    onPress={() => this.props.route.params.mainFunctions.logout()}
+  />
+);
+
+const App = props => {
   const [steps, setSteps] = useState(5000);
 
   useEffect(() => {
@@ -111,10 +120,71 @@ const App = () => {
         }
         style={{margin: 0}}
         alignment="center"
+        accessoryRight={BackAction}
       />
       <Divider />
       <Layout style={styles.layout}>
         <ScrollView style={styles.container}>
+          <Card
+            style={[
+              styles.card,
+              {
+                alignItems: 'center',
+                margin: 0,
+                padding: 20,
+                justifyContent: 'center',
+              },
+            ]}>
+            <View
+              style={[
+                StepStyles.avatarContainer,
+                {alignSelf: 'center', flex: 0},
+              ]}>
+              <View style={StepStyles.avatarInnerContainer}>
+                <Image
+                  style={StepStyles.avatar}
+                  source={require('../../../src/img/dogu.jpeg')}
+                />
+              </View>
+            </View>
+            <View
+              style={[
+                StepStyles.infoContainer,
+                {padding: 0, alignSelf: 'center'},
+              ]}>
+              <Text category={'h1'} style={StepStyles.realName}>
+                {global.real_name}
+              </Text>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <View style={{height: 10}}>
+                  <Progress.Bar
+                    progress={0.7}
+                    width={310}
+                    animated={true}
+                    color={'#eb008d'}
+                  />
+                </View>
+                <View
+                  style={{
+                    backgroundColor: '#eb008d',
+                    width: 30,
+                    height: 30,
+                    borderRadius: 15,
+                    marginLeft: 8,
+
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                  <Text style={{color: '#efefef', fontWeight: 'bold'}}>9</Text>
+                </View>
+              </View>
+              <Text style={{color: '#7d7878', fontWeight: 'bold'}}>
+                Toplam adımlarım: 289,312
+              </Text>
+            </View>
+          </Card>
+          <View style={styles.divider} />
+
           <Card style={[styles.Card]}>
             <View style={{flex: 1, alignItems: 'center', marginTop: 20}}>
               <Text style={styles.miniTitle}> Bugünkü adımlarım </Text>
@@ -192,6 +262,58 @@ const StepStyles = StyleSheet.create({
   },
   backdrop: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  container: {
+    flex: 1,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
+  avatarContainer: {
+    padding: 16,
+    height: 200,
+  },
+  infoContainer: {
+    alignItems: 'center',
+    width: '100%',
+    padding: 16,
+    paddingTop: 0,
+  },
+  logoutContainer: {
+    justifyContent: 'flex-start',
+  },
+  avatar: {
+    height: '100%',
+    width: '100%',
+    resizeMode: 'contain',
+    padding: 10,
+    zIndex: 10,
+    borderRadius: 1000,
+  },
+  avatarInnerContainer: {
+    height: '100%',
+    aspectRatio: 1,
+    borderRadius: 1000,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 5,
+      height: 5,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+  },
+  realName: {
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
+  badgeTitle: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    width: '100%',
   },
 });
 

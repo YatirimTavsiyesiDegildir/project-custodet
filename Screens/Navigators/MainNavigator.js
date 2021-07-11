@@ -25,9 +25,14 @@ const PersonIcon = props => <Icon {...props} name="person" />;
 const PeopleIcon = props => <Icon {...props} name="people-outline" />;
 const CouponIcon = props => <Icon {...props} name="activity-outline" />;
 
-const CouponsStack = props => (
+/*
+const MainStack = props => (
   <Stack.Navigator headerMode="none">
-    <Stack.Screen name="GraphsScreen" component={GraphsScreen} />
+    <Stack.Screen
+      name="GraphsScreen"
+      component={GraphsScreen}
+      initialParams={props}
+    />
     <Stack.Screen name="NotificationsScreen" component={Notifications} />
   </Stack.Navigator>
 );
@@ -38,6 +43,7 @@ const TargetStack = props => (
     <Stack.Screen name="AddTarget" component={AddTarget} />
   </Stack.Navigator>
 );
+ */
 
 const FriendsStack = props => (
   <Stack.Navigator headerMode="none">
@@ -53,21 +59,28 @@ const BottomTabBar = ({navigation, state}) => (
     onSelect={index => navigation.navigate(state.routeNames[index])}>
     <BottomNavigationTab icon={CouponIcon} />
     <BottomNavigationTab icon={PeopleIcon} />
-    <BottomNavigationTab icon={PersonIcon} />
+    {/*<BottomNavigationTab icon={PersonIcon} />*/}
   </BottomNavigation>
 );
 
 const TabNavigator = props => (
   <Navigator tabBar={props => <BottomTabBar {...props} />}>
-    <Screen name="GraphsScreen" component={CouponsStack} />
+    <Screen
+      name="GraphsScreen"
+      component={GraphsScreen}
+      initialParams={{
+        mainFunctions: {logout: () => props.mainFunctions.logout()},
+      }}
+    />
     <Screen name="FriendsScreen" component={FriendsStack} />
+    {/*
     <Screen
       name="ProfileScreen"
       component={ProfileScreen}
       initialParams={{
         mainFunctions: {logout: () => props.mainFunctions.logout()},
       }}
-    />
+    />*/}
   </Navigator>
 );
 
