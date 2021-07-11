@@ -187,7 +187,7 @@ const App = props => {
 
           <Card style={[styles.card]}>
             <Text category="h4" style={styles.titleTextMedium}>
-              Bugunku Adimlarim
+              Bugünkü Adımlarım
             </Text>
             <AnimatedCircularProgress
               size={200}
@@ -200,6 +200,19 @@ const App = props => {
             </AnimatedCircularProgress>
           </Card>
 
+          <View style={styles.divider} />
+
+          <Card
+            style={[styles.card, {backgroundColor: '#ad7070'}]}
+            status="basic">
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <Text style={{justifyContent: 'center', alignSelf: 'center', fontWeight:'bold'}}>
+                {' '}
+                Tebrikler, Anadolu hayat emeklilik kampanyalarından
+                yararlanabilirsiniz.{' '}
+              </Text>
+            </View>
+          </Card>
           <View style={styles.divider} />
           <Card style={[styles.card]}>
             <Text category={'h3'} style={styles.titleTextMedium}>

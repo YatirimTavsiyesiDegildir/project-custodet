@@ -69,7 +69,8 @@ export default class LeaderboardScreen extends Component {
             {
               userName: 'Ebru',
               km: 98,
-              img: 'https://imgproxy.generated.photos/6hpYeg88e25dSr4x5SqR_vDzd_2F9EmcGgyiYHh9M4w/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Ry/YW5zcGFyZW50X3Yz/L3YzXzA1NDM3MDMu/cG5n.png',
+              img:
+                'https://imgproxy.generated.photos/6hpYeg88e25dSr4x5SqR_vDzd_2F9EmcGgyiYHh9M4w/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Ry/YW5zcGFyZW50X3Yz/L3YzXzA1NDM3MDMu/cG5n.png',
             },
             {
               userName: 'Murat',
@@ -79,7 +80,8 @@ export default class LeaderboardScreen extends Component {
             {
               userName: 'Erhan',
               km: 124,
-              img: 'https://images.generated.photos/8xnkPoc5Jdp5vv1sc2-qATbEeGxX_IDX--CDekM9t84/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwMjUyNzkuanBn.jpg',
+              img:
+                'https://images.generated.photos/8xnkPoc5Jdp5vv1sc2-qATbEeGxX_IDX--CDekM9t84/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwMjUyNzkuanBn.jpg',
             },
             {
               userName: 'Salih',
@@ -87,24 +89,24 @@ export default class LeaderboardScreen extends Component {
               img:
                 'https://images.generated.photos/XGPwTkAbmIj4Sr0au5BLlIVbOznd_WcKQ4CcWRgCJfw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0OTg0NDguanBn.jpg',
             },
-              {
-                  userName: 'İbrahim',
-                  km: 14,
-                  img:
-                      'https://images.generated.photos/T6cK3shnsInnChmSICYtKaO1LWaKY7y7O4BRoXnsD-E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA2MTI0NjMuanBn.jpg',
-              },
-              {
-                  userName: 'Alara',
-                  km: 160,
-                  img:
-                      'https://images.generated.photos/Akr_QH_4aD38Byz34NL-YXdqVrdKz7rb2cB-Xgny2Cc/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNTAwMzIuanBn.jpg',
-              },
-              {
-                  userName: 'Genco',
-                  km: 162,
-                  img:
-                      'https://images.generated.photos/cJqV8j5DxWHaBNjk7EsMJTqpjH-Qm3qtT2P4oM_-GFQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNzA0MDIuanBn.jpg',
-              },
+            {
+              userName: 'İbrahim',
+              km: 14,
+              img:
+                'https://images.generated.photos/T6cK3shnsInnChmSICYtKaO1LWaKY7y7O4BRoXnsD-E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA2MTI0NjMuanBn.jpg',
+            },
+            {
+              userName: 'Alara',
+              km: 160,
+              img:
+                'https://images.generated.photos/Akr_QH_4aD38Byz34NL-YXdqVrdKz7rb2cB-Xgny2Cc/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNTAwMzIuanBn.jpg',
+            },
+            {
+              userName: 'Genco',
+              km: 162,
+              img:
+                'https://images.generated.photos/cJqV8j5DxWHaBNjk7EsMJTqpjH-Qm3qtT2P4oM_-GFQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNzA0MDIuanBn.jpg',
+            },
           ]}
           sortBy="km"
           labelBy="userName"
