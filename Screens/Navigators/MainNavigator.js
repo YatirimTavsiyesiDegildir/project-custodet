@@ -8,14 +8,12 @@ import {
 } from '@ui-kitten/components';
 import ProfileScreen from '../Main/Profile';
 import GraphsScreen from '../Main/Main/MainScreen';
-import AddBankAPI from '../Main/Main/AddBankAPI';
 import FriendsScreen from '../Main/Friends/Friends';
 import AddFriendsScreen from '../Main/Friends/AddFriends';
-import PastPurchasesScreen from '../Main/Main/PastPurchases';
 import TargetScreen from '../Main/Targets/Targets';
 import AddTarget from '../Main/Targets/AddTarget';
 import Notifications from '../Main/Notifications';
-import Advice from '../Main/Friends/Advice';
+import Leaderboard from '../Main/Friends/Advice';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -30,8 +28,6 @@ const CouponIcon = props => <Icon {...props} name="activity-outline" />;
 const CouponsStack = props => (
   <Stack.Navigator headerMode="none">
     <Stack.Screen name="GraphsScreen" component={GraphsScreen} />
-    <Stack.Screen name="AddBankAPI" component={AddBankAPI} />
-    <Stack.Screen name="PastPurchasesScreen" component={PastPurchasesScreen} />
     <Stack.Screen name="NotificationsScreen" component={Notifications} />
   </Stack.Navigator>
 );
@@ -47,7 +43,7 @@ const FriendsStack = props => (
   <Stack.Navigator headerMode="none">
     <Stack.Screen name="FriendsScreen" component={FriendsScreen} />
     <Stack.Screen name="AddFriendsScreen" component={AddFriendsScreen} />
-    <Stack.Screen name="AdvicesScreen" component={Advice} />
+    <Stack.Screen name="AdvicesScreen" component={Leaderboard} />
   </Stack.Navigator>
 );
 
