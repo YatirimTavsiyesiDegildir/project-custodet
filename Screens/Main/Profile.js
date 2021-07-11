@@ -86,12 +86,12 @@ export default class ProfileScreen extends Component {
                       progress={0.7}
                       width={310}
                       animated={true}
-                      color={'#eb008d'}
+                      color={'#6eb648'}
                     />
                   </View>
                   <View
                     style={{
-                      backgroundColor: '#eb008d',
+                      backgroundColor: '#6eb648',
                       width: 30,
                       height: 30,
                       borderRadius: 15,

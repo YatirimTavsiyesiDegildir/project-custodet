@@ -80,7 +80,7 @@ export default class TargetScreen extends Component {
                   borderRadius: 50,
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundColor: '#eb008d',
+                  backgroundColor: '#6eb648',
                 }}>
                 <Text style={{fontWeight: 'bold', color: '#FFF'}}>KOŞ</Text>
               </TouchableOpacity>
@@ -104,8 +104,8 @@ const BackStyles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     alignSelf: 'center',
-    backgroundColor: '#eb008d',
-    borderColor: '#eb008d',
+    backgroundColor: '#6eb648',
+    borderColor: '#6eb648',
   },
 });
 

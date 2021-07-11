@@ -98,6 +98,7 @@ const App = props => {
   }, []);
 
   const logout = () => {
+    console.log(props);
     props.route.params.mainFunctions.logout();
   };
   const BackAction = () => (
@@ -127,6 +128,26 @@ const App = props => {
       <Layout style={styles.layout}>
         <ScrollView style={styles.container}>
           <Card
+            style={[styles.card, {backgroundColor: '#045c9c'}]}
+            status="basic">
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <Text
+                style={{
+                  justifyContent: 'center',
+                  alignSelf: 'center',
+                  fontWeight: 'bold',
+                  color: '#ffffff',
+                  textAlign: 'center',
+                }}>
+                Yurumeye onem verip saglikli yasadigin icin sana ozel bir
+                hediyemiz var! {'\n'}{'\n'}
+                Hemen tikla ve Anadolu Hayat Emekliligin indirimli saglik
+                sigortasindan yararlan.
+              </Text>
+            </View>
+          </Card>
+          <View style={styles.divider} />
+          <Card
             style={[
               styles.card,
               {
@@ -154,20 +175,25 @@ const App = props => {
                 {padding: 0, alignSelf: 'center'},
               ]}>
               <Text category={'h1'} style={StepStyles.realName}>
-                {global.real_name}
+                {'Dogu'}
               </Text>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  padding: 24,
+                }}>
                 <View style={{height: 10}}>
                   <Progress.Bar
                     progress={0.7}
-                    width={310}
                     animated={true}
-                    color={'#eb008d'}
+                    width={280}
+                    color={'#6eb648'}
                   />
                 </View>
                 <View
                   style={{
-                    backgroundColor: '#eb008d',
+                    backgroundColor: '#6eb648',
                     width: 30,
                     height: 30,
                     borderRadius: 15,
@@ -175,6 +201,7 @@ const App = props => {
 
                     alignItems: 'center',
                     justifyContent: 'center',
+                    marginRight: 16,
                   }}>
                   <Text style={{color: '#efefef', fontWeight: 'bold'}}>9</Text>
                 </View>
@@ -195,31 +222,18 @@ const App = props => {
               width={20}
               backgroundWidth={30}
               fill={steps / 100}
-              tintColor="#00e0ff"
-              backgroundColor="#3d5875">
-              {steps => <Text>{Math.floor(steps * 100)} / 10,000</Text>}
+              tintColor="#6eb648"
+              backgroundColor="#efefef">
+              {steps => (
+                <Text style={{fontWeight: 'bold'}}>
+                  {Math.floor(steps * 100)} / 10,000
+                </Text>
+              )}
             </AnimatedCircularProgress>
           </Card>
 
           <View style={styles.divider} />
 
-          <Card
-            style={[styles.card, {backgroundColor: '#ad7070'}]}
-            status="basic">
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
-              <Text
-                style={{
-                  justifyContent: 'center',
-                  alignSelf: 'center',
-                  fontWeight: 'bold',
-                }}>
-                {' '}
-                Tebrikler! Sana özel bir Anadolu hayat emeklilik kampanyasından
-                yararlanmaya hak kazandın. Keşfetmek için hemen tıkla!{' '}
-              </Text>
-            </View>
-          </Card>
-          <View style={styles.divider} />
           <Card style={[styles.card]}>
             <Text category={'h3'} style={styles.titleTextMedium}>
               NFT'lerim
