@@ -40,7 +40,7 @@ export default class LeaderboardScreen extends Component {
     return (
       <SafeAreaView style={{flex: 1}}>
         <TopNavigation
-          title={<Text style={styles.miniTitle}>Lider Tablosu</Text>}
+          title={<Text style={styles.miniTitle}>Haftanin Liderleri</Text>}
           alignment="center"
           accessoryLeft={this.renderLeftActions}
         />
@@ -50,60 +50,60 @@ export default class LeaderboardScreen extends Component {
           data={[
             {
               userName: 'Dogu',
-              km: 50,
+              km: 5000,
               img:
                 'https://project-lyda.s3.eu-central-1.amazonaws.com/dogu.jpeg',
             },
             {
               userName: 'Ada',
-              km: 120,
+              km: 12000,
               img:
                 'https://project-lyda.s3.eu-central-1.amazonaws.com/ada.jpeg',
             },
             {
               userName: 'Cinar',
-              km: 100,
+              km: 10000,
               img:
                 'https://project-lyda.s3.eu-central-1.amazonaws.com/cinar.jpg',
             },
             {
               userName: 'Ebru',
-              km: 98,
+              km: 9800,
               img:
                 'https://imgproxy.generated.photos/6hpYeg88e25dSr4x5SqR_vDzd_2F9EmcGgyiYHh9M4w/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Ry/YW5zcGFyZW50X3Yz/L3YzXzA1NDM3MDMu/cG5n.png',
             },
             {
               userName: 'Murat',
-              km: 1020,
+              km: 102000,
               img: 'https://thispersondoesnotexist.com/image',
             },
             {
               userName: 'Erhan',
-              km: 124,
+              km: 12400,
               img:
                 'https://images.generated.photos/8xnkPoc5Jdp5vv1sc2-qATbEeGxX_IDX--CDekM9t84/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwMjUyNzkuanBn.jpg',
             },
             {
               userName: 'Salih',
-              km: 160,
+              km: 16000,
               img:
                 'https://images.generated.photos/XGPwTkAbmIj4Sr0au5BLlIVbOznd_WcKQ4CcWRgCJfw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA0OTg0NDguanBn.jpg',
             },
             {
               userName: 'İbrahim',
-              km: 14,
+              km: 1400,
               img:
                 'https://images.generated.photos/T6cK3shnsInnChmSICYtKaO1LWaKY7y7O4BRoXnsD-E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA2MTI0NjMuanBn.jpg',
             },
             {
               userName: 'Alara',
-              km: 160,
+              km: 16000,
               img:
                 'https://images.generated.photos/Akr_QH_4aD38Byz34NL-YXdqVrdKz7rb2cB-Xgny2Cc/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNTAwMzIuanBn.jpg',
             },
             {
               userName: 'Genco',
-              km: 162,
+              km: 16200,
               img:
                 'https://images.generated.photos/cJqV8j5DxWHaBNjk7EsMJTqpjH-Qm3qtT2P4oM_-GFQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNzA0MDIuanBn.jpg',
             },
