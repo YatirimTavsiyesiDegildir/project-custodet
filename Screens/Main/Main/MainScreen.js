@@ -107,19 +107,32 @@ const App = props => {
 
   return (
     <SafeAreaView style={{flex: 1}}>
+      <View
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Image
+          source={require('../../../src/img/wcover_barrow.png')}
+          style={{
+            height: 40,
+            width: 40,
+            overflow: 'visible',
+            resizeMode: 'center',
+            padding: 8,
+            zIndex: 10,
+            position: 'absolute',
+            top: 10,
+          }}
+        />
+      </View>
+
       <TopNavigation
-        title={
-          <Image
-            source={require('../../../src/img/logo_transparent.png')}
-            style={{
-              height: 30,
-              width: 70,
-              overflow: 'visible',
-              resizeMode: 'center',
-              padding: 8,
-            }}
-          />
-        }
         style={{margin: 0}}
         alignment="center"
         accessoryRight={BackAction}
@@ -140,7 +153,8 @@ const App = props => {
                   textAlign: 'center',
                 }}>
                 Yurumeye onem verip saglikli yasadigin icin sana ozel bir
-                hediyemiz var! {'\n'}{'\n'}
+                hediyemiz var! {'\n'}
+                {'\n'}
                 Hemen tikla ve Anadolu Hayat Emekliligin indirimli saglik
                 sigortasindan yararlan.
               </Text>
