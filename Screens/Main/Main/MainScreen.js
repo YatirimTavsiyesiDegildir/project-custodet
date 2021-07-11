@@ -250,7 +250,7 @@ const App = props => {
 
           <Card style={[styles.card]}>
             <Text category={'h3'} style={styles.titleTextMedium}>
-              NFT'lerim
+              Koleksiyon
             </Text>
             <View
               style={{
