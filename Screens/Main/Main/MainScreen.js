@@ -16,6 +16,7 @@ import {
   TopNavigation,
   TopNavigationAction,
   Icon,
+  Avatar,
   Modal,
   Button,
   Card,
@@ -218,6 +219,20 @@ const App = props => {
             <Text category={'h3'} style={styles.titleTextMedium}>
               NFT'lerim
             </Text>
+            <View style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row',}} >
+              <Avatar source={require('../../../src/img/sprites/1.png')} />
+              <Avatar source={require('../../../src/img/sprites/2.png')} />
+              <Avatar source={require('../../../src/img/sprites/3.png')} />
+              <Avatar source={require('../../../src/img/sprites/4.png')} />
+              <Avatar source={require('../../../src/img/sprites/5.png')} />
+              <Avatar source={require('../../../src/img/sprites/6.png')} />
+              <Avatar source={require('../../../src/img/sprites/7.png')} />
+              <Avatar source={require('../../../src/img/sprites/8.png')} />
+              <Avatar source={require('../../../src/img/sprites/9.png')} />
+            </View>
+
+
+
             {/*
             <View style={StepStyles.badgeRow}>
               {this.ModalWithBackdropShowcase(
