@@ -76,38 +76,7 @@ export default class App extends Component {
         .signInWithEmailAndPassword(email, password)
         .then(res => {
           console.log('User account signed in!');
-          client
-            .query({
-              query: gql`
-                query MyQuery($email: String, $password: String) {
-                  users(
-                    where: {
-                      email: {_eq: $email}
-                      _and: {password: {_eq: $password}}
-                    }
-                  ) {
-                    email
-                    real_name
-                    password
-                    tckn
-                    user_id
-                  }
-                }
-              `,
-              variables: user,
-            })
-            .then(result => {
-              if (result.data.users.length === 1) {
-                let user = result.data.users[0];
-                this.saveLoginInfo(user);
-              } else {
-                Alert.alert('Email veya sifre yanlis.');
-              }
-            })
-            .catch(result => {
-              Alert.alert('Bir hata olustu.');
-              console.log(result);
-            });
+          this.saveLoginInfo(user);
         })
         .catch(error => {
           if (error.code === 'auth/email-already-in-use') {
