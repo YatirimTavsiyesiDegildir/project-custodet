@@ -75,13 +75,6 @@ const ModalWithBackdropShowcase = (
 };
  */
 
-const BackAction = () => (
-  <TopNavigationAction
-    icon={LogoutIcon}
-    onPress={() => this.props.route.params.mainFunctions.logout()}
-  />
-);
-
 const App = props => {
   const [steps, setSteps] = useState(5000);
 
@@ -102,6 +95,13 @@ const App = props => {
       stopCounter();
     };
   }, []);
+
+  const logout = () => {
+    props.route.params.mainFunctions.logout();
+  };
+  const BackAction = () => (
+    <TopNavigationAction icon={LogoutIcon} onPress={() => logout()} />
+  );
 
   return (
     <SafeAreaView style={{flex: 1}}>

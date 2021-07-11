@@ -65,13 +65,7 @@ const BottomTabBar = ({navigation, state}) => (
 
 const TabNavigator = props => (
   <Navigator tabBar={props => <BottomTabBar {...props} />}>
-    <Screen
-      name="GraphsScreen"
-      component={GraphsScreen}
-      initialParams={{
-        mainFunctions: {logout: () => props.mainFunctions.logout()},
-      }}
-    />
+    <Screen name="GraphsScreen" component={GraphsScreen} {...props} />
     <Screen name="FriendsScreen" component={FriendsStack} />
     {/*
     <Screen
